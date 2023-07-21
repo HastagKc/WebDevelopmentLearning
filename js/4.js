@@ -29,4 +29,9 @@ let strBool = Boolean(stringValue); // true
 console.log(strBool); // true
 console.log(typeof strBool); // Boolean
 
-//* intParse() it converts string to number explicity
+//* parseInt() it converts string to number explicity
+let strNumValue = "68";
+console.log(typeof strNumValue);
+let numStrValue = parseInt(strNumValue);
+console.log(numStrValue);
+console.log(typeof numStrValue); // number
