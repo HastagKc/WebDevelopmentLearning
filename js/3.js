@@ -23,6 +23,7 @@ console.log(2 ** 3);
 //    - `*=`: Multiply and assign
 //    - `/=`: Divide and assign
 //    - `%=`: Modulus and assign
+
 let num1 = 10;
 console.log("num1 " + num1); //10
 
