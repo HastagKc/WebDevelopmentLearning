@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password check</title>
+  </head>
+  <body>
+    <input type="text" name="password" id="userinput" />
+    <button onclick="checkCondition()">Submit</button>
+
+    <script>
+      function checkCondition() {
+        // Step 1: Get the input field value
+
+        const userInput = document.getElementById("userinput").value;
+
+        // Step 2: Check the condition (Example: Check if the input is a number greater than 10)
+
+        // empty string in value is false
+        // !false =true
+        if (!userInput) {
+          alert("You cannot enter empty value");
+        } else if (
+          userInput !== "" &&
+          userInput.indexOf(" ") === -1 &&
+          userInput.length >= 6
+        ) {
+          alert("valid password");
+        } else {
+          alert("invalid password");
+        }
+        //3. Clear the input field after processing the input
+        document.getElementById("userinput").value = "";
+      }
+    </script>
+  </body>
+</html>
