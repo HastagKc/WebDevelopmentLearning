@@ -26,3 +26,18 @@ console.log(obj2.firstName); // Dot notation is a more concise and commonly used
 // modify the object in js
 obj2.firstName = "Ram";
 console.log(obj2.firstName);
+
+const employee = {
+  name: "Alice",
+  department: "HR",
+  address: {
+    street: "123 Main St",
+    city: "New York",
+    country: "USA",
+  },
+  skills: ["communication", "problem-solving", "teamwork"],
+};
+
+console.log(employee.address.city); // New York
+console.log(employee["address"]["city"]); // New York
+console.log(employee["skills"][2]); // teamwork
