@@ -28,7 +28,7 @@ console.log(interpolatedString.substring(11, 16));
 
 // ! split(separator): Splits the string into an array of substrings based on the separator.
 
-let nameOfFriends = "Kshittiz, Aashish, Suresh, Ajay";
+let nameOfFriends = "Kshittiz, Aashish, Suresh,krishna";
 console;
 
 let arrayOfFriends = nameOfFriends.toUpperCase().split(",");
@@ -41,3 +41,4 @@ let dis = "      Nepal is a beautiful country        ";
 console.log(dis.length);
 console.log(dis.trim().length);
 console.log(dis);
+console.log(dis.trim());

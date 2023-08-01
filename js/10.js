@@ -101,14 +101,3 @@ console.log(arr6);
 // sort => use to sort an array
 let sortedArray = arr6.sort();
 console.log(sortedArray);
-
-// multi dimensinal array
-let numbers = [
-  [10, 20, 25],
-  [70, 80, 35],
-  [30, 20, 55],
-];
-
-// accessing element from arrays
-
-console.log();
