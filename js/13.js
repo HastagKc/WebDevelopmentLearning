@@ -31,3 +31,16 @@ for (let i = 0; i < seatPlanning.length; i++) {
 }
 
 console.log(seatPlanning[0].length); // 6
+
+//! while loop
+
+let input = prompt("Say something ");
+
+while (true) {
+  input = prompt(input);
+
+  if (input.toLowerCase() == "stop") {
+    console.log("You win");
+    break;
+  }
+}
