@@ -2,11 +2,11 @@
 // let createNum = Math.random();
 // console.log(createNum);
 
-// // provide range
+// provide range
 // let range = createNum * 10;
 // console.log(range);
 
-// // Math.floor(createNum) + 1;
+// Math.floor(createNum) + 1;
 // console.log(Math.floor(range));
 
 // Math.floor() return nearest round up value
@@ -24,35 +24,29 @@
 // while (isNaN(input)) {
 //   input = parseInt(prompt("Invalid Inputs"));
 // }
-let maximum = parseInt(prompt("Enter the maximum number!"));
-while (!maximum) {
-  maximum = parseInt(prompt("Enter a valid number!"));
 
-  console.log(type(maximum));
+let userInput = parseInt(prompt("Enter any guess number form 1 to 10"));
+
+console.log(typeof userInput);
+
+// unless user does not click number this loop will run
+while (!userInput) {
+  userInput = parseInt(prompt("Invalid input "));
 }
-
-const targetNum = Math.floor(Math.random() * maximum) + 1;
-
-let guess = prompt("Enter your first guess! (Type 'q' to quit)");
+//
+const targetNum = Math.floor(Math.random() * 10) + 1;
+// console.log(targetNum);
 let attempts = 1;
 
-while (parseInt(guess) !== targetNum) {
-  if (guess === "q") break;
-  guess = parseInt(guess);
-  if (guess > targetNum) {
-    guess = prompt("Too high! Enter a new guess:");
-    attempts++;
-  } else if (guess < targetNum) {
-    guess = prompt("Too low! Enter a new guess:");
-    attempts++;
+while (userInput !== targetNum) {
+  attempts++;
+  if (targetNum === userInput) {
+    // console.log(`Congratulations you win !! you need ${attempts} to complete`);
+    alert(`Congratulations you win !! you need ${attempts} to complete`);
+    break;
+  } else if (targetNum > userInput) {
+    userInput = parseInt(prompt("Guess high number"));
   } else {
-    guess = prompt("Invalid guess. Please enter a number or 'q' to quit");
+    userInput = parseInt(prompt("Guess lower number"));
   }
-}
-
-if (guess === "q") {
-  console.log("OK, YOU QUIT!");
-} else {
-  console.log("CONGRATS YOU WIN!");
-  console.log(`You got it! It took you ${attempts} guesses`);
 }
