@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document object model</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: rebeccapurple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container .centerDiv {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 100px;
+      }
+      .container .centerDiv button {
+        width: 100px;
+        background-color: lightblue;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="centerDiv">
+        <h1>Hello</h1>
+        <button>Next</button>
+      </div>
+    </div>
+    <script>
+      let text = document.querySelector("h1");
+      let container = document.querySelector(".container");
+      let btn = document.querySelector("button");
+      let flag = 0;
+      btn.addEventListener("click", function () {
+        if (flag === 0) {
+          text.innerHTML = "Hello From Nepal";
+          btn.textContent = "Back";
+          container.style.backgroundColor = "blue";
+          console.log("clicked");
+          flag++;
+        } else {
+          text.innerHTML = "Hello";
+          btn.textContent = "Next";
+          container.style.backgroundColor = "lightblue";
+          btn.style.border = "2px solid black";
+          console.log("clicked  again");
+          flag--;
+        }
+      });
+    </script>
+  </body>
+</html>
