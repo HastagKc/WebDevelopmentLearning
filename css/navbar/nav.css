@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blue;
+  font-size: 62.5%;
+  /* With font-size: 62.5%;, 1.6rem = 1.6 * 10px = 16px */
+}
+/* .navbar { */
+/* } */
+
+.nav-list {
+  list-style: none;
+  width: 12rem;
+  background-color: black;
+  /* width: 120px; */
+}
+
+.nav-list .nav-links {
+  font-size: 1.2rem;
+  display: block;
+  padding: 1rem;
+}
+.nav-list .nav-links a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.nav-list .nav-links:hover {
+  background-color: #555;
+}
