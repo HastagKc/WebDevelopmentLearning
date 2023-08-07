@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  /* With font-size: 62.5%;, 1.6rem = 1.6 * 10px = 16px */
+}
+/* .navbar { */
+/* } */
+
+.nav-list {
+  list-style: none;
+  width: 12rem;
+  /* background-color: black; */
+  /* width: 120px; */
+}
+
+.nav-list .nav-links a {
+  font-size: 1.2rem;
+  display: block;
+  /* margin-bottom: 0.5rem; */
+  padding: 1rem;
+  color: black;
+  text-decoration: none;
+}
+.nav-list .nav-links:hover,
+.nav-list .nav-links a:hover {
+  background-color: #555;
+  color: white;
+}
+.nav-list .nav-links .active {
+  background-color: #11742a;
+  color: white;
+}
