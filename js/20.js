@@ -29,3 +29,19 @@ let simpleMath2 = {
 console.log(simpleMath2.firstName); // Ram
 console.log(simpleMath2.squre(3)); //9
 console.log(simpleMath2.cube(3)); //27
+
+let layEgg = {
+  name: "redHen",
+  eggCount: 0,
+  countEggNo() {
+    this.eggCount++;
+    return "Egg";
+  },
+};
+
+console.log(layEgg.eggCount);
+console.log(layEgg.countEggNo());
+console.log(layEgg.countEggNo());
+console.log(layEgg.countEggNo());
+console.log(layEgg.countEggNo());
+console.log(layEgg.eggCount);
