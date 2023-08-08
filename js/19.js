@@ -27,3 +27,16 @@ function fun() {
 }
 let returnFun = fun();
 returnFun();
+
+let rangeFun = function (min, max) {
+  return function (age) {
+    return age >= min && age <= max;
+  };
+};
+
+let checkAge = rangeFun(0, 18);
+// checkAge variable store function
+// checkAge() excute return function
+checkAge(12);
+
+console.log(checkAge(12));
