@@ -20,3 +20,8 @@ const sum = (x, y) => {
 };
 
 console.log(sum(20, 10));
+
+// implicit return in arrow function
+const mul = (num1, num2) => num1 * num2;
+// const mul = (num1, num2) => (num1 * num2);
+console.log(mul(10, 20));
