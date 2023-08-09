@@ -26,6 +26,12 @@ const people = [
     age: 25,
     city: "Chicago",
   },
+  {
+    firstName: "Kshittiz",
+    lastName: "Chaudhary",
+    age: 22,
+    city: "Kathmandu",
+  },
 ];
 
 console.log(people[0].firstName); // Output: John
@@ -64,3 +70,12 @@ let doubles = numbers.map(function (num) {
 });
 
 console.log(doubles);
+
+// making array of the people of firstname and lastname only
+let fullname = people.map(function (person) {
+  return person.firstName + " " + person.lastName;
+});
+
+console.log(fullname);
+
+// arraw function
