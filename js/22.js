@@ -5,7 +5,15 @@ arrayNum.forEach(function (element) {
   console.log(element);
 });
 
-// forEach in object
+console.log("Using arrow function ");
+
+arrayNum.forEach((element) => {
+  console.log(element);
+});
+
+console.log("=============>");
+
+// forEach in arraylist of  object
 
 const people = [
   {
@@ -41,19 +49,35 @@ console.log(people[2].age); // Output: 25
 // fullname = firstname+ lastname
 // age
 // city:
-people.forEach(function (person) {
-  console.log(
-    "Fullname: " +
-      person.firstName +
-      " " +
-      person.lastName +
-      " Age:" +
-      person.age +
-      " City:" +
-      person.city
-  );
-});
+// people.forEach(function (person) {
+//   console.log(
+//     "Fullname: " +
+//       person.firstName +
+//       " " +
+//       person.lastName +
+//       " Age:" +
+//       person.age +
+//       " City:" +
+//       person.city
+//   );
+// });
 
+console.log("Using for loop ");
+for (let i = 0; i < people.length; i++) {
+  console.log(people[i].firstName + " " + people[i].lastName);
+}
+
+// using for of
+console.log("Using for of loop ");
+// person represnt one single object in people array
+
+for (let person of people) {
+  console.log(person.firstName);
+}
+console.log("object list........");
+people.forEach((el) => {
+  console.log(`${el.firstName} ${el.lastName}`);
+});
 // map method in js
 /*
 
@@ -77,5 +101,3 @@ let fullname = people.map(function (person) {
 });
 
 console.log(fullname);
-
-// arraw function
