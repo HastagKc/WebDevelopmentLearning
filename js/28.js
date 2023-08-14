@@ -37,3 +37,55 @@ const user2 = {
 const { name: fullName, death = "Still Alive" } = user2;
 console.log(fullName);
 console.log(death);
+
+// destructuring in parameters
+function fullNameFun({ firstName, lastName }) {
+  return `${firstName} ${lastName}`;
+}
+
+console.log(fullNameFun(user));
+
+const movies = [
+  {
+    name: "Harry Potter",
+    release: 1990,
+    rating: 4.9,
+  },
+  {
+    name: "Pirates",
+    release: 1990,
+    rating: 4.8,
+  },
+  {
+    name: "SpiderMan",
+    release: 1992,
+    rating: 4.5,
+  },
+  {
+    name: "Parasite",
+    release: 2000,
+    rating: 3.5,
+  },
+  {
+    name: "Naran Dai",
+    release: 2005,
+    rating: 2.5,
+  },
+  {
+    name: "Naraniya",
+    release: 2006,
+    rating: 3.9,
+  },
+];
+
+let show = movies.map((movie) => {
+  return `${movie.name} (${movie.release}) is rated ${movie.rating}`;
+});
+console.log(show);
+
+// destructuring in map
+let show2 = movies.map(({ name, release, rating }) => {
+  return `${name} (${release}) is rated ${rating}`;
+});
+
+console.log(show2);
