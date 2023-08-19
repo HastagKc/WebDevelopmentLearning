@@ -53,14 +53,22 @@
       }
 
       .todo-list-container ul {
-        padding-left: 25px;
-        list-style: decimal-leading-zero;
+        /* padding-left: 5px; */
+        list-style: none;
+        /* list-style: decimal-leading-zero; */
+        /* background-color: red; */
       }
       .todo-list-container ul li {
-        padding-bottom: 5px;
-        padding-left: 5px;
         font-size: 18px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: rgba(84, 140, 167, 0.226);
+        cursor: pointer;
       }
+
+      /* .todo-list-container ul li:hover {
+        background-color: rgba(7, 19, 51, 0.226);
+      } */
     </style>
   </head>
   <body>
@@ -72,13 +80,29 @@
 
       <div class="todo-list-container">
         <ul>
-          <li>Read Books</li>
-          <li>Read notes</li>
-          <li>Run</li>
-          <li>Learn Web-devlopment</li>
-          <li>Watch Football</li>
+          <li class="todo-links">Read Books</li>
+          <li class="todo-links">Read notes</li>
+          <li class="todo-links">Run</li>
+          <li class="todo-links">Learn Web-devlopment</li>
+          <li class="todo-links">Watch Football</li>
         </ul>
       </div>
     </div>
+
+    <!--  js -->
+    <script>
+      const todoListContaniner = document.querySelector(".todo-list-container");
+
+      const li = document.querySelectorAll(".todo-links");
+
+      todoListContaniner.addEventListener("mouseover", () => {
+        li.style.backgroundColor = "red";
+        todoListContaniner.style.backgroundColor = "red";
+      });
+
+      li.addEventListener("mouseout", function () {
+        li.style.backgroundColor = "";
+      });
+    </script>
   </body>
 </html>
